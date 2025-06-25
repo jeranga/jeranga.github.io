@@ -48,51 +48,122 @@
               <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
                 <h2>Projects</h2>
-                <p>
+                <div style="text-align: center; margin-bottom: 20px;">
+                  <button onclick="showSection('ml')" id="ml-btn" style="margin: 0 5px; padding: 8px 16px; background-color: #4CAF50; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: 500; transition: all 0.2s ease;">Machine Learning</button>
+                  <button onclick="showSection('se')" id="se-btn" style="margin: 0 5px; padding: 8px 16px; background-color: #f5f5f5; color: #333; border: none; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: 500; transition: all 0.2s ease;">Software Engineering</button>
+                  <button onclick="showSection('gd')" id="gd-btn" style="margin: 0 5px; padding: 8px 16px; background-color: #f5f5f5; color: #333; border: none; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: 500; transition: all 0.2s ease;">Game Development</button>
+                  <button onclick="showAllSections()" id="all-btn" style="margin: 0 5px; padding: 8px 16px; background-color: #f5f5f5; color: #333; border: none; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: 500; transition: all 0.2s ease;">View All</button>
+                </div>
+                <p style="text-align: center; font-size: 12px; color: #666; margin-bottom: 20px; font-style: italic;">
+                  Projects with code hosted online are highlighted in yellow
+                </p>
+                <script>
+                  function showSection(section) {
+                    // Hide all sections
+                    document.getElementById('ml-section').style.display = 'none';
+                    document.getElementById('se-section').style.display = 'none';
+                    document.getElementById('gd-section').style.display = 'none';
+                    
+                    // Show selected section
+                    document.getElementById(section + '-section').style.display = 'block';
+                    
+                    // Update button styles
+                    document.getElementById('ml-btn').style.backgroundColor = '#f5f5f5';
+                    document.getElementById('ml-btn').style.color = '#333';
+                    document.getElementById('se-btn').style.backgroundColor = '#f5f5f5';
+                    document.getElementById('se-btn').style.color = '#333';
+                    document.getElementById('gd-btn').style.backgroundColor = '#f5f5f5';
+                    document.getElementById('gd-btn').style.color = '#333';
+                    document.getElementById('all-btn').style.backgroundColor = '#f5f5f5';
+                    document.getElementById('all-btn').style.color = '#333';
+                    
+                    // Highlight selected button
+                    if (section === 'ml') {
+                      document.getElementById('ml-btn').style.backgroundColor = '#4CAF50';
+                      document.getElementById('ml-btn').style.color = 'white';
+                    } else if (section === 'se') {
+                      document.getElementById('se-btn').style.backgroundColor = '#2196F3';
+                      document.getElementById('se-btn').style.color = 'white';
+                    } else if (section === 'gd') {
+                      document.getElementById('gd-btn').style.backgroundColor = '#FF9800';
+                      document.getElementById('gd-btn').style.color = 'white';
+                    }
+                  }
                   
-                I'm passionate about computer vision, algorithms, and app development. My projects encompass a wide range of areas, including automization, time tracking, gaming, web development, and notification management. Projects with code hosted online are highlighted.
+                  function showAllSections() {
+                    // Show all sections
+                    document.getElementById('ml-section').style.display = 'block';
+                    document.getElementById('se-section').style.display = 'block';
+                    document.getElementById('gd-section').style.display = 'block';
+                    
+                    // Update button styles
+                    document.getElementById('ml-btn').style.backgroundColor = '#f5f5f5';
+                    document.getElementById('ml-btn').style.color = '#333';
+                    document.getElementById('se-btn').style.backgroundColor = '#f5f5f5';
+                    document.getElementById('se-btn').style.color = '#333';
+                    document.getElementById('gd-btn').style.backgroundColor = '#f5f5f5';
+                    document.getElementById('gd-btn').style.color = '#333';
+                    document.getElementById('all-btn').style.backgroundColor = '#9C27B0';
+                    document.getElementById('all-btn').style.color = 'white';
+                  }
+                  
+                  // Show ML section by default
+                  window.onload = function() {
+                    showSection('ml');
+                  }
+                </script>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <!-- Machine Learning Section -->
+          <div id="ml-section">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>Machine Learning</h2>
+                <p>
+                  My machine learning projects focus on computer vision applications and implementing core algorithms from scratch. I'm particularly interested in automation and predictive modeling.
                 </p>
               </td>
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-
-
-    <tr onmouseout="stomach_stop()" onmouseover="stomach_start()">
+    <tr onmouseout="optimizer_stop()" onmouseover="optimizer_start()" bgcolor="#ffffd0">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
-          <div class="two" id='stomach_image' style="opacity: 0;">
-            <img src='images/stomach_preview.png' width=160>
+          <div class="two" id='optimizer_image' style="opacity: 0;">
+            <img src='images/researchML2.png' width=160>
           </div>
-          <img src='images/stomach_logo.png' width=160>
+          <img src='images/researchML1.png' width=160>
         </div>
         <script type="text/javascript">
-          function stomach_start() {
-            document.getElementById('stomach_image').style.opacity = "1";
+          function optimizer_start() {
+            document.getElementById('optimizer_image').style.opacity = "1";
           }
 
-          function stomach_stop() {
-            document.getElementById('stomach_image').style.opacity = "0";
+          function optimizer_stop() {
+            document.getElementById('optimizer_image').style.opacity = "0";
           }
-          stomach_stop()
+          optimizer_stop()
         </script>
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://drdropkicks.itch.io/stomach">
-          <span class="papertitle">Stomach: Horror Cooking Game</span>
+        <a href="https://github.com/jeranga/optimizer-comparison-nn-training">
+          <span class="papertitle">Optimizer Comparison Study: Neural Network Training Analysis</span>
         </a>
         <br>
-        <strong>Team of 8</strong> (Capstone Project)
+		<strong>Jeronimo del Valle</strong>
         <br>
-        <em>Unity, C#</em>, 2025
+        <em>Python, PyTorch, Jupyter</em>, 2025
         <br>
-        <a href="https://drdropkicks.itch.io/stomach">itch.io page</a>
+        <a href="https://github.com/jeranga/optimizer-comparison-nn-training">project page</a>
         /
-        <a href="https://www.youtube.com/watch?v=R94DfX2gpSc">trailer</a>
+        <a href="https://github.com/jeranga/optimizer-comparison-nn-training/blob/main/paper.pdf">research paper</a>
         <p></p>
         <p>
-          Stomach is a first-person horror cooking game where you play as a line cook recently hired for a cruise ship. Your job is to prepare ingredients and make dishes to deliver to customers, but each night the ship seems to twist and turn against you, with walls that sound less like creaking and more like breathing. No matter what you might see or hear... YOU. MUST. COOK. This capstone project will be released on Steam and itch.io.
+          A comprehensive, reproducible study comparing five optimizers (SGD, Momentum, Adam, AdamW, and AdaBound) on MNIST dataset across different network depths and activation functions. The research includes a complete Jupyter notebook for reproduction and a detailed PDF paper. Key findings show that adaptive optimizers outperform SGD and Momentum for deeper networks, with AdaBound + Swish achieving 98.2% accuracy on 3-layer networks. The study demonstrates the importance of optimizer selection and activation function choice in neural network training.
         </p>
       </td>
     </tr>
@@ -132,123 +203,46 @@
         </p>
       </td>
     </tr>
-	
 
-    <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
+    <tr onmouseout="tree_stop()" onmouseover="tree_start()" bgcolor="#ffffd0">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
-          <div class="two" id='nuvo_image'><video  width=100% height=100% muted autoplay loop>
-              <source src="images/tabTimePreview.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video></div>
-          <img src='images/TabTimeTrackerIcon.png' width=100%>
+          <img src='images/tree.png' width=160>
         </div>
-        <script type="text/javascript">
-          function nuvo_start() {
-            document.getElementById('nuvo_image').style.opacity = "1";
-          }
-
-          function nuvo_stop() {
-            document.getElementById('nuvo_image').style.opacity = "0";
-          }
-          nuvo_stop()
-        </script>
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://chromewebstore.google.com/detail/tab-time-tracker/gnpjjglcmfbkniccaghdhhabnhhpnhcc">
-          <span class="papertitle">Tab Time Tracker: Reordering Tabs Based on Usage</span>
+        <a href="https://github.com/jeranga/generic-tree">
+          <span class="papertitle">Decision Tree Classifier: From Scratch</span>
         </a>
         <br>
 		<strong>Jeronimo del Valle</strong>
         <br>
-        <em>Chrome Web Store</em>, 2023
+        <em>Python</em>, 2024
         <br>
-        <a href="https://chromewebstore.google.com/detail/tab-time-tracker/gnpjjglcmfbkniccaghdhhabnhhpnhcc">product page</a>
+        <a href="https://github.com/jeranga/generic-tree">project page</a>
         <p></p>
         <p>
-          Frustrated by the constant clutter of tabs while working on various projects, I embarked on a mission to find a solution. The result of my efforts was Tab Time Tracker, a Google Chrome extension crafted with HTML, CSS, and JavaScript.
-
-          The idea was simple: create a tool that not only identified duplicate tabs but also sorted them based on usage time. 
+          This repository offers a streamlined Python decision tree classifier, capable of handling CSV datasets for varied predictive modeling tasks. Utilizing pandas for data management and numpy for calculations, it features an adjustable-depth decision tree algorithm and k-fold cross-validation for optimized performance evaluation.
         </p>
       </td>
     </tr>
-	
-	
-    <tr onmouseout="recon_stop()" onmouseover="recon_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='recon_image'><video  width=100% height=100% muted autoplay loop>
-          <source src="images/bubPopPreview.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video></div>
-          <img src='images/bubPopIcon.png' width="160">
-        </div>
-        <script type="text/javascript">
-          function recon_start() {
-            document.getElementById('recon_image').style.opacity = "1";
-          }
 
-          function recon_stop() {
-            document.getElementById('recon_image').style.opacity = "0";
-          }
-          recon_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://apps.apple.com/us/app/bubpop-supreme-relaxing-game/id6458647910">
-			<span class="papertitle">BubPop Supreme - Relaxing Game</span>
-        </a>
-        <br>
-		<strong>Jeronimo del Valle</strong>
-        <br>
-        <em>App Store</em>, 2023
-        <br>
-        <a href="https://apps.apple.com/us/app/bubpop-supreme-relaxing-game/id6458647910">product page</a>
-        <p></p>
-        <p>
-        BubPop Supreme was my first large-scale solo project, a relaxing bubble popping game that I launched on the App Store in 2023. I focused on making every pop feel satisfying and built a visually appealing world around it. The game is packed with cool power-ups and serene backdrops, making it the perfect go-to for anyone looking to relax. It also incorporates advertisements and in-app purchases. Check it out! Its free to download.
-        </p>
-      </td>
-    </tr>
-    
+          </tbody></table>
+          </div>
 
-
-    <tr onmouseout="npil_stop()" onmouseover="npil_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='npil_image'>
-            <img src='images/auto_snooze_prev.png' width="160"></div>
-          <img src='images/auto_snooze_logo.png' width="160">
-        </div>
-        <script type="text/javascript">
-          function npil_start() {
-            document.getElementById('npil_image').style.opacity = "1";
-          }
-
-          function npil_stop() {
-            document.getElementById('npil_image').style.opacity = "0";
-          }
-          npil_stop()
-        </script>
-  </td>
-  <td style="padding:20px;width:75%;vertical-align:middle">
-    <a href="https://apps.apple.com/us/app/auto-snooze/id6451183295">
-      <span class="papertitle">Auto Snooze
-</span>
-    </a>
-    <br>
-	<strong>Jeronimo del Valle</strong>,
-    <br>
-	<em>App Store</em>, 2023
-    <br>
-    <a href="https://apps.apple.com/us/app/auto-snooze/id6451183295">product page</a>
-    <p></p>
-    <p>
-    
-    Auto Snooze sprang from my own desire for an alarm that could turn off by itself, essential for my lucid dreaming practices, specifically the Wake Back To Bed (WBTB) method. I couldn't find anything suitable on the App Store, so I created a solution that allows users to customize their alarm sound and duration. 
-    </p>
-  </td>
-</tr>          
+          <!-- Software Engineering Section -->
+          <div id="se-section" style="display: none;">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>Software Engineering</h2>
+                <p>
+                  My software engineering projects range from mobile applications and browser extensions to web development and API design. I focus on creating practical solutions that enhance user productivity and experience.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
     <tr onmouseout="camp_stop()" onmouseover="camp_start()" bgcolor="#ffffd0">
       <td style="padding:20px;width:25%;vertical-align:middle">
@@ -294,31 +288,214 @@
       </td>
     </tr>
 
-    <tr onmouseout="tree_stop()" onmouseover="tree_start()" bgcolor="#ffffd0">
+    <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
-          <img src='images/tree.png' width=160>
+          <div class="two" id='nuvo_image'><video  width=100% height=100% muted autoplay loop>
+              <source src="images/tabTimePreview.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+              </video></div>
+          <img src='images/TabTimeTrackerIcon.png' width=100%>
         </div>
+        <script type="text/javascript">
+          function nuvo_start() {
+            document.getElementById('nuvo_image').style.opacity = "1";
+          }
+
+          function nuvo_stop() {
+            document.getElementById('nuvo_image').style.opacity = "0";
+          }
+          nuvo_stop()
+        </script>
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://github.com/jeranga/generic-tree">
-          <span class="papertitle">Decision Tree Classifier: From Scratch</span>
+        <a href="https://chromewebstore.google.com/detail/tab-time-tracker/gnpjjglcmfbkniccaghdhhabnhhpnhcc">
+          <span class="papertitle">Tab Time Tracker: Reordering Tabs Based on Usage</span>
         </a>
         <br>
 		<strong>Jeronimo del Valle</strong>
         <br>
-        <em>Python</em>, 2024
+        <em>Chrome Web Store</em>, 2023
         <br>
-        <a href="https://github.com/jeranga/generic-tree">project page</a>
+        <a href="https://chromewebstore.google.com/detail/tab-time-tracker/gnpjjglcmfbkniccaghdhhabnhhpnhcc">product page</a>
         <p></p>
         <p>
-          This repository offers a streamlined Python decision tree classifier, capable of handling CSV datasets for varied predictive modeling tasks. Utilizing pandas for data management and numpy for calculations, it features an adjustable-depth decision tree algorithm and k-fold cross-validation for optimized performance evaluation.
+          Frustrated by the constant clutter of tabs while working on various projects, I embarked on a mission to find a solution. The result of my efforts was Tab Time Tracker, a Google Chrome extension crafted with HTML, CSS, and JavaScript.
+
+          The idea was simple: create a tool that not only identified duplicate tabs but also sorted them based on usage time. 
         </p>
       </td>
     </tr>
-	
-            
+
+    <tr onmouseout="npil_stop()" onmouseover="npil_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='npil_image'>
+            <img src='images/auto_snooze_prev.png' width="160"></div>
+          <img src='images/auto_snooze_logo.png' width="160">
+        </div>
+        <script type="text/javascript">
+          function npil_start() {
+            document.getElementById('npil_image').style.opacity = "1";
+          }
+
+          function npil_stop() {
+            document.getElementById('npil_image').style.opacity = "0";
+          }
+          npil_stop()
+        </script>
+  </td>
+  <td style="padding:20px;width:75%;vertical-align:middle">
+    <a href="https://apps.apple.com/us/app/auto-snooze/id6451183295">
+      <span class="papertitle">Auto Snooze
+</span>
+    </a>
+    <br>
+	<strong>Jeronimo del Valle</strong>,
+    <br>
+	<em>App Store</em>, 2023
+    <br>
+    <a href="https://apps.apple.com/us/app/auto-snooze/id6451183295">product page</a>
+    <p></p>
+    <p>
+    
+    Auto Snooze sprang from my own desire for an alarm that could turn off by itself, essential for my lucid dreaming practices, specifically the Wake Back To Bed (WBTB) method. I couldn't find anything suitable on the App Store, so I created a solution that allows users to customize their alarm sound and duration. 
+    </p>
+  </td>
+</tr>          
+
           </tbody></table>
+          </div>
+
+          <!-- Game Development Section -->
+          <div id="gd-section" style="display: none;">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>Game Development</h2>
+                <p>
+                  My passion for game development spans from mobile games to immersive 3D experiences. I focus on creating engaging gameplay mechanics and memorable user experiences.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+    <tr onmouseout="stomach_stop()" onmouseover="stomach_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='stomach_image' style="opacity: 0;">
+            <img src='images/stomach_preview.png' width=160>
+          </div>
+          <img src='images/stomach_logo.png' width=160>
+        </div>
+        <script type="text/javascript">
+          function stomach_start() {
+            document.getElementById('stomach_image').style.opacity = "1";
+          }
+
+          function stomach_stop() {
+            document.getElementById('stomach_image').style.opacity = "0";
+          }
+          stomach_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="https://drdropkicks.itch.io/stomach">
+          <span class="papertitle">Stomach: Horror Cooking Game</span>
+        </a>
+        <br>
+        <strong>Team of 8</strong> (Capstone Project)
+        <br>
+        <em>Unity, C#</em>, 2025
+        <br>
+        <a href="https://drdropkicks.itch.io/stomach">itch.io page</a>
+        /
+        <a href="https://www.youtube.com/watch?v=R94DfX2gpSc">trailer</a>
+        <p></p>
+        <p>
+          Stomach is a first-person horror cooking game where you play as a line cook recently hired for a cruise ship. Your job is to prepare ingredients and make dishes to deliver to customers, but each night the ship seems to twist and turn against you, with walls that sound less like creaking and more like breathing. No matter what you might see or hear... YOU. MUST. COOK. This capstone project will be released on Steam and itch.io.
+        </p>
+      </td>
+    </tr>
+
+    <tr onmouseout="prop_hunt_stop()" onmouseover="prop_hunt_start()" bgcolor="#ffffd0">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='prop_hunt_image' style="opacity: 0;">
+            <img src='images/prophuntsc2.png' width=160>
+          </div>
+          <img src='images/prophuntsc1.png' width=160>
+        </div>
+        <script type="text/javascript">
+          function prop_hunt_start() {
+            document.getElementById('prop_hunt_image').style.opacity = "1";
+          }
+
+          function prop_hunt_stop() {
+            document.getElementById('prop_hunt_image').style.opacity = "0";
+          }
+          prop_hunt_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="https://github.com/jeranga/prop-hunt-highrise">
+          <span class="papertitle">Prop Hunt Highrise - Multiplayer Game</span>
+        </a>
+        <br>
+		<strong>Jeronimo del Valle</strong>
+        <br>
+        <em>Unity, Lua</em>, 2025
+        <br>
+        <a href="https://github.com/jeranga/prop-hunt-highrise">project page</a>
+        /
+        <a href="https://highrise.game/world/683f5adb766eca6556698591">play game</a>
+        <p></p>
+        <p>
+          A multiplayer prop hunt game developed for Highrise Studio where players can transform into props and hide from each other. Built with Unity using Lua scripting, this project demonstrates my skills in multiplayer game development, networking, and creative gameplay mechanics. Players take on the role of either hunters or props, with props able to disguise themselves as various objects in the environment while hunters search for them.
+        </p>
+      </td>
+    </tr>
+
+    <tr onmouseout="recon_stop()" onmouseover="recon_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='recon_image'><video  width=100% height=100% muted autoplay loop>
+          <source src="images/bubPopPreview.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/bubPopIcon.png' width="160">
+        </div>
+        <script type="text/javascript">
+          function recon_start() {
+            document.getElementById('recon_image').style.opacity = "1";
+          }
+
+          function recon_stop() {
+            document.getElementById('recon_image').style.opacity = "0";
+          }
+          recon_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="https://apps.apple.com/us/app/bubpop-supreme-relaxing-game/id6458647910">
+			<span class="papertitle">BubPop Supreme - Relaxing Game</span>
+        </a>
+        <br>
+		<strong>Jeronimo del Valle</strong>
+        <br>
+        <em>App Store</em>, 2023
+        <br>
+        <a href="https://apps.apple.com/us/app/bubpop-supreme-relaxing-game/id6458647910">product page</a>
+        <p></p>
+        <p>
+        BubPop Supreme was my first large-scale solo project, a relaxing bubble popping game that I launched on the App Store in 2023. I focused on making every pop feel satisfying and built a visually appealing world around it. The game is packed with cool power-ups and serene backdrops, making it the perfect go-to for anyone looking to relax. It also incorporates advertisements and in-app purchases. Check it out! Its free to download.
+        </p>
+      </td>
+    </tr>
+
+          </tbody></table>
+          </div>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:0px">
