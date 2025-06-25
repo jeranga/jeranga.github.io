@@ -49,10 +49,10 @@
               <td style="padding:20px;width:100%;vertical-align:middle">
                 <h2>Projects</h2>
                 <div style="text-align: center; margin-bottom: 20px;">
-                  <button onclick="showSection('ml')" id="ml-btn" style="margin: 0 5px; padding: 8px 16px; background-color: #4CAF50; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: 500; transition: all 0.2s ease;">Machine Learning</button>
+                  <button onclick="showSection('ml')" id="ml-btn" style="margin: 0 5px; padding: 8px 16px; background-color: #f5f5f5; color: #333; border: none; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: 500; transition: all 0.2s ease;">Machine Learning</button>
                   <button onclick="showSection('se')" id="se-btn" style="margin: 0 5px; padding: 8px 16px; background-color: #f5f5f5; color: #333; border: none; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: 500; transition: all 0.2s ease;">Software Engineering</button>
                   <button onclick="showSection('gd')" id="gd-btn" style="margin: 0 5px; padding: 8px 16px; background-color: #f5f5f5; color: #333; border: none; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: 500; transition: all 0.2s ease;">Game Development</button>
-                  <button onclick="showAllSections()" id="all-btn" style="margin: 0 5px; padding: 8px 16px; background-color: #f5f5f5; color: #333; border: none; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: 500; transition: all 0.2s ease;">View All</button>
+                  <button onclick="showAllSections()" id="all-btn" style="margin: 0 5px; padding: 8px 16px; background-color: #9C27B0; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: 500; transition: all 0.2s ease;">View All</button>
                 </div>
                 <p style="text-align: center; font-size: 12px; color: #666; margin-bottom: 20px; font-style: italic;">
                   Projects with code hosted online are highlighted in yellow
@@ -107,9 +107,9 @@
                     document.getElementById('all-btn').style.color = 'white';
                   }
                   
-                  // Show ML section by default
+                  // Show all sections by default
                   window.onload = function() {
-                    showSection('ml');
+                    showAllSections();
                   }
                 </script>
               </td>
