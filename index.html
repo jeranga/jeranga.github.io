@@ -381,6 +381,47 @@
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+    <tr onmouseout="io_game_stop()" onmouseover="io_game_start()" bgcolor="#ffffd0">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='io_game_image' style="opacity: 0;">
+            <video width=160 muted autoplay loop>
+              <source src="images/battle-io-vid.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <img src='images/arena-io-logo.png' width=160>
+        </div>
+        <script type="text/javascript">
+          function io_game_start() {
+            document.getElementById('io_game_image').style.opacity = "1";
+          }
+
+          function io_game_stop() {
+            document.getElementById('io_game_image').style.opacity = "0";
+          }
+          io_game_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="https://github.com/jeranga/io-arena-shooter">
+          <span class="papertitle">IO Arena Shooter - Multiplayer Browser Game</span>
+        </a>
+        <br>
+		<strong>Jeronimo del Valle</strong>
+        <br>
+        <em>Node.js, Socket.io, JavaScript, HTML5 Canvas</em>, 2025
+        <br>
+        <a href="https://github.com/jeranga/io-arena-shooter">project page</a>
+        /
+        <a href="https://battle-io.com">play game</a>
+        <p></p>
+        <p>
+          A real-time multiplayer arena shooter game built with Node.js and Socket.io, featuring dynamic weapon systems, level progression, and competitive gameplay. Players engage in fast-paced combat with upgradable weapons and passive abilities, while competing for top positions on the live leaderboard. The game includes a sophisticated upgrade system with legendary status unlocks, real-time player statistics, and smooth client-server synchronization. Built with modern web technologies including HTML5 Canvas for rendering and Vite for optimized development workflow.
+        </p>
+      </td>
+    </tr>
+
     <tr onmouseout="stomach_stop()" onmouseover="stomach_start()">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
